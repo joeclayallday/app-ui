@@ -10,6 +10,7 @@ import {
   deploymentsUrl,
   endpointsUrl,
   environmentsUrl,
+  resourcesUrl,
   searchUrl,
   securityDashboardUrl,
   servicesUrl,
@@ -65,6 +66,7 @@ export const ApplicationSidebar = () => {
     { name: "Endpoints", to: endpointsUrl(), icon: <IconEndpoint /> },
     { name: "Services", to: servicesUrl(), icon: <IconService /> },
     { name: "Deployments", to: deploymentsUrl(), icon: <IconCloud /> },
+    { name: "Service Directory", to: resourcesUrl(), icon: <IconLayers /> },
     { name: "Activity", to: activityUrl(), icon: <IconHeart /> },
     {
       name: "Security & Compliance",

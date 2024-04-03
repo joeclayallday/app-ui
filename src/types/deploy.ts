@@ -581,3 +581,39 @@ export interface DeployServiceSizingPolicy extends Timestamps {
   minimumMemory: number;
   maximumMemory: number | null;
 }
+
+export interface DeployEksCluster extends Timestamps {
+  id: string;
+  version: string;
+  region: string;
+  arn: string;
+  name: string;
+  kubernetesNetworkConfigServiceIpv4Cidr: string;
+  kubernetesNetworkConfigServiceIpv6Cidr: string;
+  kubernetesNetworkConfigServiceIpFamily: string;
+  clusterLoggingTypesEnabled: string;
+  identityOidcIssuer: string;
+  certificateAuthorityData: string;
+  clientRequestToken: string;
+  platformVersion: string;
+  connectorConfigActivationId: string;
+  connectorConfigActivationCode: string;
+  connectorConfigActivationExpiry: string;
+  connectorConfigProvider: string;
+  connectorConfigRoleArn: string;
+  accessConfigBootstrapClusterCreatorAdminPermissions: boolean;
+  accessConfigAuthenticationMode: boolean;
+  resourcesVpcConfigVpcId: string;
+  resourcesVpcConfigEndpointPublicAccess: boolean;
+  resourcesVpcConfigEndpointPrivateAccess: boolean;
+  resourcesVpcConfigPublicAccessCidrs: string;
+  resourcesVpcConfigSubnetIds: string;
+  resourcesVpcConfigSecurityGroupIds: string;
+  resourcesVpcConfigClusterSecurityGroupId: string;
+  organizationId: string;
+}
+
+export interface DeployResource {
+  id: string;
+  displayName: string;
+}

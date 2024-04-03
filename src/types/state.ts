@@ -83,3 +83,41 @@ export interface Deployment {
   configurationId: string;
   imageId: string;
 }
+
+export interface EksCluster {
+  id: string;
+  name: string;
+  version: string;
+  arn: string;
+  region: string;
+  kubernetesNetworkConfigServiceIpv4Cidr: string;
+  kubernetesNetworkConfigServiceIpv6Cidr: string;
+  kubernetesNetworkConfigServiceIpFamily: string;
+  clusterLoggingTypesEnabled: string;
+  identityOidcIssuer: string;
+  certificateAuthorityData: string;
+  clientRequestToken: string;
+  platformVersion: string;
+  connectorConfigActivationId: string;
+  connectorConfigActivationCode: string;
+  connectorConfigActivationExpiry: string;
+  connectorConfigProvider: string;
+  connectorConfigRoleArn: string;
+  accessConfigBootstrapClusterCreatorAdminPermissions: boolean;
+  accessConfigAuthenticationMode: boolean;
+  resourcesVpcConfigVpcId: string;
+  resourcesVpcConfigEndpointPublicAccess: boolean;
+  resourcesVpcConfigEndpointPrivateAccess: boolean;
+  resourcesVpcConfigPublicAccessCidrs: string;
+  resourcesVpcConfigSubnetIds: string;
+  resourcesVpcConfigSecurityGroupIds: string;
+  resourcesVpcConfigClusterSecurityGroupId: string;
+  organizationId: string;
+  updatedAt: string;
+  createdAt: string;
+}
+
+export interface Resource {
+  id: string;
+  displayName: string;
+}

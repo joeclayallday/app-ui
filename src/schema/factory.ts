@@ -29,12 +29,14 @@ import {
   DeployVpcPeer,
   DeployVpnTunnel,
   Deployment,
+  EksCluster,
   Invitation,
   Membership,
   ModalType,
   Organization,
   Otp,
   Permission,
+  Resource,
   Role,
   Theme,
   Token,
@@ -821,5 +823,50 @@ export const defaultDeployment = (a: Partial<Deployment> = {}): Deployment => {
     imageId: "",
     configurationId: "",
     ...a,
+  };
+};
+
+export const defaultEksCluster = (c: Partial<EksCluster> = {}): EksCluster => {
+  const now = new Date().toISOString();
+  return {
+    id: "",
+    name: "",
+    version: "",
+    arn: "",
+    region: "",
+    kubernetesNetworkConfigServiceIpv4Cidr: "",
+    kubernetesNetworkConfigServiceIpv6Cidr: "",
+    kubernetesNetworkConfigServiceIpFamily: "",
+    clusterLoggingTypesEnabled: "",
+    identityOidcIssuer: "",
+    certificateAuthorityData: "",
+    clientRequestToken: "",
+    platformVersion: "",
+    connectorConfigActivationId: "",
+    connectorConfigActivationCode: "",
+    connectorConfigActivationExpiry: "",
+    connectorConfigProvider: "",
+    connectorConfigRoleArn: "",
+    accessConfigBootstrapClusterCreatorAdminPermissions: true,
+    accessConfigAuthenticationMode: true,
+    resourcesVpcConfigVpcId: "",
+    resourcesVpcConfigEndpointPublicAccess: true,
+    resourcesVpcConfigEndpointPrivateAccess: true,
+    resourcesVpcConfigPublicAccessCidrs: "",
+    resourcesVpcConfigSubnetIds: "",
+    resourcesVpcConfigSecurityGroupIds: "",
+    resourcesVpcConfigClusterSecurityGroupId: "",
+    organizationId: "",
+    createdAt: now,
+    updatedAt: now,
+    ...c,
+  };
+};
+
+export const defaultResource = (r: Partial<Resource> = {}): Resource => {
+  return {
+    id: "",
+    displayName: "",
+    ...r,
   };
 };

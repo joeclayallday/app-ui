@@ -387,3 +387,18 @@ export const createLogDrainUrl = (envId = "") =>
 
 export const SUPPORT_URL = "/support";
 export const supportUrl = () => SUPPORT_URL;
+
+export const RESOURCES_PATH = "/resources";
+export const resourcesUrl = () => RESOURCES_PATH;
+
+export const EKS_CLUSTER_DETAIL_PATH = "/eks_clusters/:id";
+export const eksClustersDetailUrl = (id: string) => `/eks_clusters/${id}`;
+
+export const EKS_CLUSTER_DETAIL_DEPLOYMENTS_PATH = "/eks_clusters/:id/deployments";
+export const eksClustersDetailDeploymentslUrl = (id: string) => `/eks_clusters/${id}/deployments`;
+
+export const EKS_CLUSTER_DETAIL_RELEASES_PATH = "/eks_clusters/:id/releases";
+export const eksClustersDetailReleaseslUrl = (id: string) => `/eks_clusters/${id}/releases`;
+
+export const EKS_CLUSTER_DETAIL_SOURCES_PATH = "/eks_clusters/:id/sources";
+export const eksClustersDetailSourceslUrl = (id: string) => `/eks_clusters/${id}/sources`;

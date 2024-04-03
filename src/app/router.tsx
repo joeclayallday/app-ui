@@ -101,6 +101,7 @@ import {
   OtpSetupPage,
   PlansPage,
   ReactRouterErrorElement,
+  ResourcesPage,
   RoleDetailEnvironmentsPage,
   RoleDetailMembersPage,
   RoleDetailPage,
@@ -137,13 +138,16 @@ import {
   TeamRolesPage,
   TeamSsoPage,
   VerifyEmailPage,
-  VerifyEmailRequired,
+  VerifyEmailRequired, EksClusterDetail,
 } from "@app/ui";
 import { DeploymentDetailLayout } from "@app/ui/layouts/deployment-detail-layout";
 import { EnvironmentEndpointsPage } from "@app/ui/pages/environment-detail-endpoints";
 import { SettingsProfilePage } from "@app/ui/pages/settings-profile";
 import { RouteObject, createBrowserRouter } from "react-router-dom";
 import { Tuna } from "./tuna";
+import {EksClusterDetailDeployments} from "@app/ui/pages/eks-cluster-detail-deployments";
+import {EksClusterDetailReleases} from "@app/ui/pages/eks-cluster-detail-releases";
+import {EksClusterDetailSources} from "@app/ui/pages/eks-cluster-detail-sources";
 
 const trackingPatch = (appRoute: RouteObject) => ({
   ...appRoute,
@@ -184,6 +188,51 @@ export const appRoutes: RouteObject[] = [
           <AppSidebarLayout>
             <DeploymentsPage />
           </AppSidebarLayout>
+        ),
+      },
+
+      {
+        path: routes.RESOURCES_PATH,
+        element: (
+            <AppSidebarLayout>
+              <ResourcesPage />
+            </AppSidebarLayout>
+        ),
+      },
+
+      {
+        path: routes.EKS_CLUSTER_DETAIL_PATH,
+        element: (
+            <AppSidebarLayout>
+              <EksClusterDetail />
+            </AppSidebarLayout>
+        ),
+      },
+
+      {
+        path: routes.EKS_CLUSTER_DETAIL_DEPLOYMENTS_PATH,
+        element: (
+            <AppSidebarLayout>
+              <EksClusterDetailDeployments />
+            </AppSidebarLayout>
+        ),
+      },
+
+      {
+        path: routes.EKS_CLUSTER_DETAIL_RELEASES_PATH,
+        element: (
+            <AppSidebarLayout>
+              <EksClusterDetailReleases />
+            </AppSidebarLayout>
+        ),
+      },
+
+      {
+        path: routes.EKS_CLUSTER_DETAIL_SOURCES_PATH,
+        element: (
+            <AppSidebarLayout>
+              <EksClusterDetailSources />
+            </AppSidebarLayout>
         ),
       },
 

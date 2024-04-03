@@ -24,6 +24,7 @@ import { serviceSizingPolicyEntities } from "./service-sizing-policy";
 import { stackEntities } from "./stack";
 import { vpcPeerEntities } from "./vpc-peer";
 import { vpnTunnelEntities } from "./vpn-tunnel";
+import { eksClusterEntities } from "@app/deploy/eks-clusters";
 
 export const entities = {
   ...appEntities,
@@ -53,4 +54,5 @@ export const entities = {
   ...imageEntities,
   ...diskEntities,
   ...serviceSizingPolicyEntities,
+  ...eksClusterEntities,
 };

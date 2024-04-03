@@ -80,5 +80,7 @@ export const [schema, initialState] = createSchema({
     empty: factory.defaultServiceSizingPolicy(),
   }),
   deployments: slice.table({ empty: factory.defaultDeployment() }),
+  eksClusters: slice.table({ empty: factory.defaultEksCluster() }),
+  resources: slice.table({ empty: factory.defaultResource() }),
 });
 export type WebState = typeof initialState;
