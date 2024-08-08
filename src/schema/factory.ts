@@ -758,6 +758,7 @@ export const defaultUser = (u: Partial<User> = {}): User => {
     username: "",
     verified: false,
     currentOtpId: "",
+    externalId: "",
     selectedOrganizationId: "",
     ...u,
   };
@@ -800,6 +801,7 @@ export const defaultRole = (r: Partial<Role> = {}): Role => {
     organizationId: "",
     name: "",
     type: "platform_user",
+    scimCreated: false,
     createdAt: now,
     updatedAt: now,
     ...r,
